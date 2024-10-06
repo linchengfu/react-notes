@@ -3,6 +3,7 @@
 import { useState } from 'react'
 import NotePreview from '@/components/NotePreview'
 import { useFormStatus } from 'react-dom'
+import { deleteNote, saveNote } from '@/app/actions'
 
 export default function NoteEditor({
   noteId,
@@ -45,6 +46,7 @@ export default function NoteEditor({
             disabled={pending}
             type="submit"
             role="menuitem"
+            formAction={() => saveNote(noteId, title, body)}
           >
             <img
               src="/checkmark.svg"
@@ -60,6 +62,7 @@ export default function NoteEditor({
               className="note-editor-delete"
               disabled={pending}
               role="menuitem"
+              formAction={() => deleteNote(noteId)}
             >
               <img
                 src="/cross.svg"

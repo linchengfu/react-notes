@@ -1,6 +1,5 @@
 import SidebarNoteItem from '@/components/SidebarNoteItem';
 import { getAllNotes } from '@/lib/redis';
-import { Suspense } from 'react';
 
 export default async function NoteList() {
   const sleep = ms => new Promise(r => setTimeout(r, ms));
