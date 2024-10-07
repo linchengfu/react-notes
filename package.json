@@ -6,7 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "dev:prod": "npm run build && npm run start",
+    "dev:prod": "pnpm run build && pnpm run start",
     "lint": "next lint"
   },
   "dependencies": {
@@ -16,7 +16,8 @@
     "next": "14.2.14",
     "react": "^18",
     "react-dom": "^18",
-    "sanitize-html": "^2.13.1"
+    "sanitize-html": "^2.13.1",
+    "zod": "^3.23.8"
   },
   "devDependencies": {
     "eslint": "^8",
